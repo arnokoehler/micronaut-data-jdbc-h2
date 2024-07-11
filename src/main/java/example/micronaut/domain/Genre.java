@@ -19,45 +19,40 @@ import io.micronaut.data.annotation.GeneratedValue;
 import io.micronaut.data.annotation.Id;
 import io.micronaut.data.annotation.MappedEntity;
 import io.micronaut.serde.annotation.Serdeable;
-
 import jakarta.validation.constraints.NotNull;
 
-import javax.persistence.Column;
-
 @Serdeable
-@MappedEntity(value = "GENRE") // Need to uppercase the table name because of DataBricks / ANSI Dialect
+@MappedEntity
 public class Genre {
 
-    @Id
-    @Column(name = "ID") // Need to uppercase the column name because of DataBricks / ANSI Dialect
-    @GeneratedValue(GeneratedValue.Type.AUTO)
-    private Long id;
+  @Id
+  @GeneratedValue(GeneratedValue.Type.AUTO)
+  private Long id;
 
-    @NotNull
-    @Column(name = "NAME") // Need to uppercase the column name because of DataBricks / ANSI Dialect
-    private String name;
+  @NotNull
+  private String name;
 
-    public Long getId() {
-        return id;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public String getName() {
-        return name;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    @Override
-    public String toString() {
-        return "Genre{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
+  @Override
+  public String toString() {
+    return "Genre{" +
+        "id=" + id +
+        ", name='" + name + '\'' +
+        '}';
+  }
 }

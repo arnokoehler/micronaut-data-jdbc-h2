@@ -26,6 +26,7 @@ dependencies {
     implementation("jakarta.validation:jakarta.validation-api")
     implementation("javax.persistence:javax.persistence-api")
     compileOnly("io.micronaut:micronaut-http-client")
+    runtimeOnly("org.yaml:snakeyaml:2.1")
     runtimeOnly("ch.qos.logback:logback-classic")
 //    runtimeOnly("com.mysql:mysql-connector-j")
 //    runtimeOnly("org.flywaydb:flyway-mysql")
