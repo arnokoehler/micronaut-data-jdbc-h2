@@ -25,16 +25,16 @@ import jakarta.validation.constraints.NotNull;
 import javax.persistence.Column;
 
 @Serdeable
-@MappedEntity(value = "GENRE")
+@MappedEntity(value = "GENRE") // Need to uppercase the table name because of DataBricks / ANSI Dialect
 public class Genre {
 
     @Id
-    @Column(name = "ID")
+    @Column(name = "ID") // Need to uppercase the column name because of DataBricks / ANSI Dialect
     @GeneratedValue(GeneratedValue.Type.AUTO)
     private Long id;
 
     @NotNull
-    @Column(name = "NAME")
+    @Column(name = "NAME") // Need to uppercase the column name because of DataBricks / ANSI Dialect
     private String name;
 
     public Long getId() {

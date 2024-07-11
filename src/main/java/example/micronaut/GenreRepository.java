@@ -27,8 +27,8 @@ import jakarta.transaction.Transactional;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
-@JdbcRepository(dialect = Dialect.ANSI) // <1>
-public interface GenreRepository extends PageableRepository<Genre, Long> { // <2>
+@JdbcRepository(dialect = Dialect.ANSI) // ANSI dialect because of DataBricks will be used later (with another driver)
+public interface GenreRepository extends PageableRepository<Genre, Long> {
 
     Genre save(@NonNull @NotBlank String name);
 
