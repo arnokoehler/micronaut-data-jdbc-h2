@@ -1,12 +1,6 @@
 micronaut:
   application:
     name: micronautguide
-  data:
-    naming:
-      column:
-        strategy: io.micronaut.data.model.naming.NamingStrategies$UpperCase
-      table:
-        strategy: io.micronaut.data.model.naming.NamingStrategies$UnderScoreSeparatedUpperCase
 
 datasources:
   default:

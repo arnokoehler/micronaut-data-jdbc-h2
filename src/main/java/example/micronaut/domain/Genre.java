@@ -18,11 +18,12 @@ package example.micronaut.domain;
 import io.micronaut.data.annotation.GeneratedValue;
 import io.micronaut.data.annotation.Id;
 import io.micronaut.data.annotation.MappedEntity;
+import io.micronaut.data.model.naming.NamingStrategies;
 import io.micronaut.serde.annotation.Serdeable;
 import jakarta.validation.constraints.NotNull;
 
 @Serdeable
-@MappedEntity
+@MappedEntity(namingStrategy = NamingStrategies.UpperCase.class)
 public class Genre {
 
   @Id
